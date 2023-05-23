@@ -5,7 +5,9 @@
 body {
   position: relative;
   color: white;
-  height: 100vh;
+  min-height: 100vh;
+  /* height: 100vh; */
+  /* background: #dd5789; */
   background: linear-gradient(
     200.96deg,
     #fedc2a -29.09%,
@@ -13,10 +15,10 @@ body {
     #7a2c9e 129.35%
   );
   font-family: sans-serif;
-  overflow-y: hidden;
+  overflow: auto;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  /* justify-content: center;
+  align-items: center; */
 }
 
 button {

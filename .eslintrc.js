@@ -12,7 +12,14 @@ module.exports = {
     'no-shadow': 'off',
     '@typescript-eslint/no-shadow': 'error',
     'no-unused-vars': 'off',
-    '@typescript-eslint/no-unused-vars': 'error',
+    '@typescript-eslint/no-unused-vars': [
+      'warn',
+      {
+        argsIgnorePattern: '^(_*$|ignore)',
+        varsIgnorePattern: '^(_*$|ignore)',
+        caughtErrorsIgnorePattern: '^(_*$|ignore)',
+      },
+    ],
   },
   parserOptions: {
     ecmaVersion: 2020,
