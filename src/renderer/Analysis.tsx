@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './Data.css';
+import './Analysis.css';
 import getData from './utils/main';
 
 interface IProps {
@@ -23,7 +23,7 @@ interface IData {
   resultUrl: string;
 }
 
-export default function Data({ mainImageURL, imageURLs }: IProps) {
+export default function Analysis({ mainImageURL, imageURLs }: IProps) {
   const [data, setData] = useState<IData>({} as IData);
   const [disabled, setDisabled] = useState(false);
 

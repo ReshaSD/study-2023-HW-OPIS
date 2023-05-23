@@ -1,7 +1,7 @@
 import { MemoryRouter as Router, Routes, Route } from 'react-router-dom';
 import { useState } from 'react';
 import './App.css';
-import Data from './Data';
+import Analysis from './Analysis';
 
 function Hello() {
   // const [images, setImages] = useState([]);
@@ -78,7 +78,7 @@ function Hello() {
           ))}
         </div>
       </div>
-      <Data mainImageURL={mainImageURL} imageURLs={imageURLs} />
+      <Analysis mainImageURL={mainImageURL} imageURLs={imageURLs} />
     </div>
   );
 }
