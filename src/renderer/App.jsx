@@ -43,7 +43,7 @@ function Hello() {
         style={{
           display: 'flex',
           flexDirection: 'row',
-          borderBottom: '1px solid black',
+          // borderBottom: '1px solid black',
         }}
       >
         <div
@@ -74,7 +74,7 @@ function Hello() {
             onChange={onImageChange}
           />
           {imageURLs.map((src, ind) => (
-            <img src={src} alt={`img: ${ind}`} />
+            <img src={src} alt={`img: ${ind}`} key={src} />
           ))}
         </div>
       </div>

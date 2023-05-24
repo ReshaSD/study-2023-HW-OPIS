@@ -466,7 +466,6 @@ export async function classifyImage(
       // BufferedImage crop = image.getSubimage(i, j, areaSize, areaSize);
       // eslint-disable-next-line no-await-in-loop
       const cropValues: number[][] = await imgToArray(crop);
-      if (i === 0 && j === 0) console.log('tst: cropValues', cropValues);
       const cropBinaryMatrix: number[][] = getBinaryMatrix(
         cropValues,
         limitVector,
@@ -478,7 +477,6 @@ export async function classifyImage(
       /* Проводимо екзамен області відносно кожного класу */
       for (let k = 0; k < classVectors.length; k += 1) {
         const res = exam(classVectors[k], radii[k], cropBinaryMatrix);
-        console.log('tst: exam', res);
         /* Якщо значення після екзамену більше за поточне значення, то відносимо область до цього класу */
         if (res > classValue) {
           classNumber = k;
