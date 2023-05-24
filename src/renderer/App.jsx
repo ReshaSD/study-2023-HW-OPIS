@@ -3,7 +3,7 @@ import { useState } from 'react';
 import './App.css';
 import Analysis from './Analysis';
 
-function Hello() {
+function Main() {
   // const [images, setImages] = useState([]);
   // const [mainImage, setMainImage] = useState();
 
@@ -54,7 +54,12 @@ function Hello() {
             padding: 16,
           }}
         >
-          <input type="file" accept="image/jpg" onChange={onMainImageChange} />
+          <input
+            type="file"
+            accept="image/jpg"
+            onChange={onMainImageChange}
+            style={{ marginBottom: '1rem' }}
+          />
           {!!mainImageURL && (
             <img height="600" width="600" src={mainImageURL} alt="main" />
           )}
@@ -72,9 +77,15 @@ function Hello() {
             multiple
             accept="image/jpg"
             onChange={onImageChange}
+            style={{ marginBottom: '1rem' }}
           />
           {imageURLs.map((src, ind) => (
-            <img src={src} alt={`img: ${ind}`} key={src} />
+            <img
+              src={src}
+              alt={`img: ${ind}`}
+              key={src}
+              style={{ marginBottom: '1rem' }}
+            />
           ))}
         </div>
       </div>
@@ -87,7 +98,7 @@ export default function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Hello />} />
+        <Route path="/" element={<Main />} />
       </Routes>
     </Router>
   );

@@ -7,7 +7,6 @@ import {
   getVectorFromBinaryMatrix,
 } from './IEITCartesian';
 import { imgToArray } from './image-utils';
-// import { Color } from './constants';
 
 /**
  * Метод для отримання значень кольорів пікселів для зображень кожного класу
@@ -82,16 +81,7 @@ export default async function getData(
   mainImageURL: string,
   imageURLs: string[]
 ) {
-  // const classesImagesNames: string[] = [
-  //   'heart_sand.jpg',
-  //   'heart_forest.jpg',
-  //   'heart_water2.jpg',
-  // ];
-  // const classesImagesNames: string[] = ["forest.jpg", "road.jpg", "field.jpg", "field2.jpg"];
-  // const colors: Color[] = [Color.BLUE, Color.ORANGE, Color.RED, Color.BLACK];
-
   const data = await launch(mainImageURL, imageURLs, 50);
-  // launch("Phantom_article_cloudy_photo_nadir_cropped.jpg", classesImagesNames, 51);
 
   // eslint-disable-next-line no-console
   console.log('data', data);

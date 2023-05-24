@@ -5,7 +5,7 @@
 body {
   position: relative;
   color: white;
-  min-height: 100vh;
+  min-height: calc(100vh - 1rem);
   min-width: 850px;
   /* height: 100vh; */
   /* background: #dd5789; */
